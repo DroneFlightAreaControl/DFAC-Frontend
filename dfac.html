@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<title>DroneFlightAreaControl</title>
+		<link rel="stylesheet" type="text/css" href="css/dfac.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/dfac-ui.js"></script>
+		<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWcVCSP7-a25oBYZvZcOOiRY_EDDs2LKA&callback=initMap"></script>
+		<link rel="icon" type="image/png" href="./img/favicon.ico" />
+	</head>
+	<body>
+		<div id="dfac-container">
+			<div id="dfac-sidebar">
+				<div id="dfac-header" class="dfac-sidebar-item">
+					<p id="dfac-logo-1">DFAC</p>
+					<p id="dfac-logo-2">Drone<br/>Flight<br/>Area<br/>Control</p>
+				</div>
+				<div id="dfac-scroller" class="dfac-sidebar-item">
+					<div id="dfac-actionmenu" class="dfac-scroller-item">
+						<div class="dfac-task dfac-task-header">
+							<p class="dfac-task-idata bold">Actions:</p>
+						</div>
+						<div class="dfac-task">
+							<p id="dfac-task-selected" class="">New</p>
+							<table style="width:100%;padding:0px;border-collapse: collapse;"><tbody><tr><td>
+							<input type="button" id="dfac-action-update" class="dfac-action-button" value="Update" />
+							</td><td>
+							<input type="button" id="dfac-action-locate" class="dfac-action-button" value="Pick Location" />
+							</td><td>
+							<input type="button" id="dfac-action-cancel" class="dfac-action-button" value="Remove" />
+							</td></tr></tbody></table>
+							<input type="button" id="dfac-action-add" class="dfac-action-button" value="Add New" />
+						</div>
+						<div id="dfac-task-i" class="dfac-task">
+						<table id="dfac-task-table-i" class="dfac-task-table dfac-task-input">
+							<tr>
+								<td class="dfac-task-ref dfac-task-input">
+									Task:
+								</td>
+								<td class="dfac-task-data dfac-task-input">
+									<input type="text" id="dfac-task-name-i" class="dfac-task-itext" />
+									<p id="dfac-task-number-i" class="dfac-task-idata dfac-task-number dfac-task-priority dfac-task-input">0</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="dfac-task-ref dfac-task-input">
+									Lat:
+								</td>
+								<td class="dfac-task-data dfac-task-input">
+									<input type="text" id="dfac-task-lat-i" class="dfac-task-itext" />
+								</td>
+							</tr>
+							<tr>
+								<td class="dfac-task-ref dfac-task-input">
+									Lon:
+								</td>
+								<td class="dfac-task-data dfac-task-input">
+									<input type="text" id="dfac-task-lon-i" class="dfac-task-itext" />
+								</td>
+							</tr>
+							<tr>
+								<td class="dfac-task-ref dfac-task-input">
+									Type:
+								</td>
+								<td class="dfac-task-data dfac-task-input">
+									<input type="text" id="dfac-task-type-i" class="dfac-task-itext" />
+								</td>
+							</tr>
+							<tr>
+								<td class="dfac-task-ref dfac-task-input">
+									Desc:
+								</td>
+								<td class="dfac-task-data dfac-task-input">
+									<input type="text" id="dfac-task-desc-i" class="dfac-task-itext" />
+								</td>
+							</tr>
+						</table>
+						<div style="margin-left:-5px;" class="dfac-task">
+							<p class="dfac-task-idata" >Server Address:</p>
+							<table style="width:100%;padding:0px;border-collapse: collapse;" class="dfac-task-input"><tbody><tr><td class="dfac-task-input">
+							<input type="text" id="dfac-server-address" class="dfac-task-itext" value="http://localhost/" />
+							</td><td class="dfac-task-input">
+							<input type="button" id="dfac-server-update" class="dfac-action-button" value="Set" />
+							</td></tr></tbody></table>
+						</div>
+					</div>
+					</div>
+					<div id="dfac-tasks" class="dfac-scroller-item">
+						<div class="dfac-task dfac-task-header">
+							<p class="dfac-task-idata bold">Tasks:</p>
+							<p id="dfac-tasks-count" class="dfac-task-idata"></p>
+						</div>
+						<div id="dfac-active-tasks">
+						</div>
+						<div id="dfac-other-tasks">
+						</div>
+					</div>
+					<div id="dfac-drones" class="dfac-scroller-item">
+						<div class="dfac-task dfac-task-header">
+							<p class="dfac-task-idata bold">Drones:</p>
+							<p id="dfac-drones-count" class="dfac-task-idata"></p>
+						</div>
+					</div>
+				</div>
+				<div id="dfac-footer" class="dfac-sidebar-item">
+					DFAC &copy;2016 M. Omo and J. Rowley
+				</div>
+			</div>
+			<div id="dfac-map">
+			</div>
+		</div>
+	</body>
+</html>

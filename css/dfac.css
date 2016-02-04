@@ -1,0 +1,205 @@
+#dfac-container{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	//display: flex;
+	//flex-direction: row;
+}
+#dfac-sidebar{
+	height:100%;
+	width:320px;
+	background:#111;
+	color:#DDD;
+	font-family: tahoma;
+	border-right: 2px solid #555555;
+	overflow: hidden;
+	float: left;
+}
+.dfac-sidebar-item{
+	width:320px;
+}
+.dfac-scroller-item{
+	width:300px;
+	border-bottom: 2px solid #555555;
+}
+#dfac-header{
+	position: absolute;
+	top: 0px;
+	width: 304px;
+	height: 73px;
+	background: #222222;
+	padding: 0px 8px 0px 8px;
+	border-bottom: 2px solid #555555;
+}
+#dfac-logo-1{
+	display:inline-block;
+	font-size: 60px;
+	font-family: impact;
+	letter-spacing: 1px;
+	margin:0;
+}
+#dfac-logo-2{
+	display:inline-block;
+	top:0px;
+	font-size: 14px;
+	font-family: impact;
+	letter-spacing: 1px;
+	line-height: 90%;
+	margin:0;
+}
+#dfac-scroller{
+	position: absolute;
+	top: 75px;
+	bottom: 37px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+#dfac-footer{
+	position: absolute;
+	background: #222222;
+	bottom:0px;
+	width: 304px;
+	height: 19px;
+	vertical-align: bottom;
+	border-top: 2px solid #555555;
+	padding:8px;
+}
+#dfac-map{
+	top: 0px;
+	height: 100%;
+	background: #AAA;
+}
+.dfac-task{
+	padding:5px;
+	//display:block;
+	width:290px;
+	border-top: 1px solid #444;
+}
+.dfac-task-idata{
+	float: left;
+	display:inline-block;
+	margin:0px;
+	height: 20px;
+}
+.dfac-task-header{
+	border-top: 0px;
+	height: 20px;
+}
+.bold{
+	font-weight:bold;
+}
+#dfac-tasks-count{
+	float: right;
+}
+#dfac-drones-count{
+	float: right;
+}
+.dfac-task-table{
+	//border: 1px solid #777;
+	border-collapse: collapse;
+	color: #ddd;
+	width: 100%;
+}
+.dfac-task-ref{
+	//border: 1px solid #777;
+	text-align: right;
+	padding-right: 5px;
+	color: #ddd;
+	background: #222;
+	width: 45px;
+}
+.dfac-task-data{
+	//border: 1px solid #777;
+	color: #ddd;
+}
+.dfac-task-number{
+	display: inline-block;
+	float: right;
+	background: #222;
+	width: 40px;
+	//border-left: 0px solid #777;
+	padding: 0px 3px 0px 3px;
+	margin: -1px;
+	cursor: pointer;
+}
+.dfac-task-number::before{
+	content:"#";
+}
+.dfac-task-number:hover{
+	background: #444;
+}
+.dfac-task-number:active{
+	background: #111;
+}
+.dfac-task-center{
+	float: right;
+	background: #228;
+	width: 40px;
+	text-align: center;
+	border-left: 0px solid #777;
+	padding: 0px 3px 0px 3px;
+	margin: -1px;
+	letter-spacing: -3px;
+	cursor: pointer;
+}
+.dfac-task-center:hover{
+	background: #44A;
+}
+.dfac-task-center:active{
+	background: #224;
+}
+.dfac-task-active{
+	background: #2C2;
+	color: #313;
+}
+.dfac-task-active:hover{
+	background: #4F4;
+}
+.dfac-task-active:active{
+	background: #282;
+}
+.dfac-task-priority{
+	background: #CC2;
+	color: #113;
+}
+.dfac-task-priority:hover{
+	background: #FF4;
+}
+.dfac-task-priority:active{
+	background: #882;
+}
+#dfac-task-selected::before{
+	content:"Currently Selected: ";
+	font-style: italic;
+}
+#dfac-task-selected{
+	font-size: 17px;
+	margin: 0px;
+}
+.dfac-action-button{
+	width: 100%;
+	color: #000;
+}
+.dfac-task-itext{
+	float: left;
+	display:inline-block;
+	margin:-1px;
+	height: 20px;
+	width: 100%;
+	border: 0px;
+	background: none;
+}
+#dfac-task-name-i{
+	width: 186px;
+}
+input{
+	color: #DDD;
+}
+.dfac-task-input{
+	border: 1px solid #777;
+}
+.dfac-task-input.dfac-task-number{
+	border-left: 1px solid #777;
+}
